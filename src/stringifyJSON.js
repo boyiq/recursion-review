@@ -37,9 +37,6 @@ var stringifyJSON = function(obj) {
         if (typeof obj[key] !== 'undefined' && typeof obj[key] !== 'function') {
           stringContent = stringContent + stringifyJSON(key) + ':' + stringifyJSON(obj[key]) + ',';
         }
-        console.log('key, ', key);
-        console.log('obj[key], ', obj[key]);
-        console.log('stringified key, ', stringifyJSON(key));
       }
       stringContent = stringContent.slice(0, stringContent.length - 1);
       return '{' + stringContent + '}';
